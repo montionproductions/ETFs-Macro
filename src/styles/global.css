@@ -1,0 +1,214 @@
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  color: #e5eefc;
+  background: #07111f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 32rem),
+    radial-gradient(circle at top right, rgba(168, 85, 247, 0.16), transparent 28rem),
+    #07111f;
+}
+
+.app-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.hero {
+  padding: 40px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 32px;
+  background: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #38bdf8;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.hero h1 {
+  max-width: 780px;
+  margin: 0;
+  font-size: clamp(2.2rem, 6vw, 5rem);
+  line-height: 0.95;
+}
+
+.hero p:last-child {
+  max-width: 720px;
+  color: #a7b4c8;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.toolbar {
+  margin: 24px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.toolbar label {
+  display: grid;
+  gap: 8px;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+select {
+  min-width: 220px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  background: rgba(15, 23, 42, 0.9);
+  color: #f8fafc;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.score-card,
+.panel {
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 28px;
+  padding: 28px;
+  background: rgba(15, 23, 42, 0.76);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 2.4rem;
+}
+
+.card-header p {
+  margin: 6px 0 0;
+  color: #94a3b8;
+}
+
+.score-badge {
+  width: 116px;
+  height: 116px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: linear-gradient(145deg, #38bdf8, #6366f1);
+  color: white;
+  box-shadow: 0 16px 40px rgba(56, 189, 248, 0.28);
+}
+
+.score-badge span {
+  font-size: 2.4rem;
+  font-weight: 900;
+}
+
+.score-badge small {
+  margin-top: -28px;
+  opacity: 0.78;
+}
+
+.card-grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.card-grid div {
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(2, 6, 23, 0.38);
+}
+
+.card-grid span {
+  display: block;
+  color: #94a3b8;
+  font-size: 0.78rem;
+  margin-bottom: 6px;
+}
+
+.card-grid strong {
+  color: #f8fafc;
+}
+
+.thesis-box {
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(14, 165, 233, 0.1);
+  color: #dbeafe;
+}
+
+.thesis-box p {
+  margin: 6px 0;
+}
+
+.panel h3 {
+  margin: 0 0 18px;
+  font-size: 1.4rem;
+}
+
+.chart-box {
+  width: 100%;
+  height: auto;
+}
+
+.recharts-text {
+  fill: #cbd5e1;
+}
+
+.recharts-cartesian-grid line,
+.recharts-polar-grid-angle line,
+.recharts-polar-grid-concentric path {
+  stroke: rgba(148, 163, 184, 0.24);
+}
+
+.recharts-default-tooltip {
+  background: #020617 !important;
+  border: 1px solid rgba(148, 163, 184, 0.24) !important;
+  border-radius: 12px !important;
+}
+
+@media (max-width: 850px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero,
+  .score-card,
+  .panel {
+    padding: 24px;
+    border-radius: 24px;
+  }
+
+  .card-header {
+    flex-direction: column;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
